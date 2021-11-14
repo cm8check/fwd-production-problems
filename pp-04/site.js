@@ -6,12 +6,26 @@
 
 x = 5;
 
+/*
 function double(num) {
-  x = num * 2;
+  let x = num * 2;
   return x;
 }
+*/
 
-double(6);
+var app = {
+  double: function(num) {
+    if (typeof(num) !== 'number') {
+      console.log("double: non-number value received");
+      return -1;
+    }
+
+    let x = num * 2;
+    return x;
+  }
+}
+
+app.double(6);
 console.log('The value of x is', x, '-- it should be 5.');
 
 /*
